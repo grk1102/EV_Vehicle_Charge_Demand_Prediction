@@ -21,23 +21,24 @@ The EV Adoption Forecaster is a Streamlit-based tool designed to predict EV adop
 ## Dataset
 The dataset (preprocessed_ev_data.csv) contains historical EV adoption data for Washington State counties, with the following key columns:
 
-# Date: Timestamp of the data point (converted to datetime).
-# County: Name of the county.
-# State: State identifier (e.g., WA).
-# Electric Vehicle (EV) Total: Number of EVs registered.
-# Battery Electric Vehicles (BEVs): Count of BEVs.
-# Plug-In Hybrid Electric Vehicles (PHEVs): Count of PHEVs.
-# Non-Electric Vehicle Total: Count of non-EVs.
-# Total Vehicles: Total vehicle count.
-# Percent Electric Vehicles: Percentage of EVs among total vehicles.
-# county_encoded: Label-encoded county identifier.
-# months_since_start: Time index since the earliest data point per county.
-# Lagged Features: ev_total_lag1, ev_total_lag2, ev_total_lag3 (1-, 2-, and 3-month lagged EV totals).
-# Rolling Mean: ev_total_roll_mean_3 (3-month rolling mean of EV totals).
-# Percentage Changes: ev_total_pct_change_1, ev_total_pct_change_3 (1- and 3-month percentage changes).
-# Growth Slope: ev_growth_slope (6-month rolling linear slope of cumulative EV growth).
+Date: Timestamp of the data point (converted to datetime).
+County: Name of the county.
+State: State identifier (e.g., WA).
+Electric Vehicle (EV) Total: Number of EVs registered.
+Battery Electric Vehicles (BEVs): Count of BEVs.
+Plug-In Hybrid Electric Vehicles (PHEVs): Count of PHEVs.
+Non-Electric Vehicle Total: Count of non-EVs.
+Total Vehicles: Total vehicle count.
+Percent Electric Vehicles: Percentage of EVs among total vehicles.
+county_encoded: Label-encoded county identifier.
+months_since_start: Time index since the earliest data point per county.
+Lagged Features: ev_total_lag1, ev_total_lag2, ev_total_lag3 (1-, 2-, and 3-month lagged EV totals).
+Rolling Mean: ev_total_roll_mean_3 (3-month rolling mean of EV totals).
+Percentage Changes: ev_total_pct_change_1, ev_total_pct_change_3 (1- and 3-month percentage changes).
+Growth Slope: ev_growth_slope (6-month rolling linear slope of cumulative EV growth).
 
-# Note: The dataset is not included in the repository due to its size. Contact the repository owner for access or use a compatible dataset.
+# Note:
+The dataset is not included in the repository due to its size. Contact the repository owner for access or use a compatible dataset.
 
 ## Installation
 
