@@ -1,4 +1,4 @@
-### EV Vehicle Charge Demand Prediction
+# EV Vehicle Charge Demand Prediction
 
 ## Overview
 This repository contains a Streamlit web application for forecasting electric vehicle (EV) adoption trends in Washington State counties over a 3-year horizon. It uses a RandomForestRegressor model trained on historical EV data with engineered features to predict cumulative EV counts, offering interactive visualizations and multi-county comparisons. The project was developed as part of the AICTE Internship Cycle 2 by S4F.
@@ -37,22 +37,22 @@ Rolling Mean: ev_total_roll_mean_3 (3-month rolling mean of EV totals).
 Percentage Changes: ev_total_pct_change_1, ev_total_pct_change_3 (1- and 3-month percentage changes).
 Growth Slope: ev_growth_slope (6-month rolling linear slope of cumulative EV growth).
 
-# Note:
+### Note:
 The dataset is not included in the repository due to its size. Contact the repository owner for access or use a compatible dataset.
 
 ## Installation
 
-# Clone the repository:
+### Clone the repository:
 git clone https://github.com/grk1102/EV_Vehicle_Charge_Demand_Prediction.git
 cd EV_Vehicle_Charge_Demand_Prediction
 
 
-# Install dependencies:
+### Install dependencies:
 Ensure Python 3.8+ is installed,
 then install the required packages:
 pip install -r requirements.txt
 
-# The requirements.txt includes:
+### The requirements.txt includes:
 numpy==1.26.4
 pandas==1.5.3
 scikit-learn==1.6.1
@@ -62,14 +62,14 @@ streamlit==1.44.1
 tensorflow==2.19.0
 
 
-# Prepare the model and data:
+### Prepare the model and data:
 
 Place the pre-trained model (forecasting_ev_model.pkl), dataset (preprocessed_ev_data.csv), and image (ev-car-factory.jpg) in the project directory.
 Update file paths in app.py if necessary (default paths assume local storage).
 
 
 
-# Usage
+### Usage
 
 Run the prototype code (optional, for model training and preprocessing):
 
@@ -79,7 +79,7 @@ Execute the prototype script to preprocess data, train the RandomForestRegressor
 Outputs include preprocessed_ev_data.csv, forecasting_ev_model.pkl, and plots (stacked_column_chart.png, kings_forecast.png, kings_cumulative.png, top_5_counties.png).
 
 
-# Run the Streamlit app:
+### Run the Streamlit app:
 streamlit run app.py
 
 
@@ -92,7 +92,7 @@ View growth percentage estimates and interactive visualizations.
 
 ## Model Details
 
-# Model:
+### Model:
 RandomForestRegressor with hyperparameter tuning via RandomizedSearchCV.
 Input Features:
 months_since_start: Time index per county.
@@ -103,22 +103,22 @@ ev_total_pct_change_1, ev_total_pct_change_3: 1- and 3-month percentage changes 
 ev_growth_slope: 6-month rolling linear slope of cumulative EV growth.
 
 
-# Target:
+### Target:
 Electric Vehicle (EV) Total (monthly EV count).
 Evaluation Metrics: Mean Absolute Error (MAE), Root Mean Squared Error (RMSE), R² Score.
 Forecast Horizon: 36 months (3 years).
 
 ## Features
 
-# Data Preprocessing:
+### Data Preprocessing:
 Handles missing values, converts data types, caps outliers in Percent Electric Vehicles, and creates time-series features (lags, rolling mean, percentage changes, growth slope).
-# Single County Forecast:
+### Single County Forecast:
 Displays historical and forecasted cumulative EV trends for a selected county, with growth percentage estimates.
-# Multi-County Comparison:
+### Multi-County Comparison:
 Compares cumulative EV adoption trends for up to three counties in a single plot.
-# Visualizations:
+### Visualizations:
 Matplotlib-based plots (e.g., stacked bar charts for EV types, cumulative trend plots) with a dark theme in the Streamlit app.
-# User Interface: 
+### User Interface: 
 treamlit app with a gradient background, custom styling, and an EV-related image (ev-car-factory.jpg).
 
 ## Results
